@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Social Cohesion</title>
+        <link rel="stylesheet" href="css/foundation.min.css" />
+        <link rel="stylesheet" href="css/foundation-icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/radar-plot.css" />
+    	<script src="scripts/lib/modernizr.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+    </head>
+    <body>
+        <nav class="top-bar">
+          <!-- <div class="title-area">
+            <div id="loader-gif">
+                Loading
+                <img src="assets/loader.gif">
+            </div>
+
+          </div> -->
+           <div id="demog-selectors">
+                <select id="city">
+                    <option value="each">All cities</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                    <option value="Enschede">Enschede</option>
+                    <option value="Gravenhage">Gravenhage</option>
+                    <option value="Utrecht">Utrecht</option>
+                </select>
+                <select id="year">
+                    <option value="0">All years</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
+            </div>
+
+          <section class="top-nav">
+            <ul id="section-btns" class="right">
+              <li class="section-btn active" data-section="radar-plot">
+                <a href="javascript:void(0)">Radar plot</a>
+              </li>
+              <!-- <li class="section-btn" data-section="crime">
+                <a href="javascript:void(0)">Crime</a>
+              </li>
+              <li class="section-btn" data-section="home">
+                <a href="javascript:void(0)">Home ownership</a>
+              </li>
+              <li class="section-btn" data-section="migration">
+                <a href="javascript:void(0)">Migration</a>
+              </li> -->
+              <li class="section-btn" data-section="map">
+                <a href="javascript:void(0)">Sharing</a>
+              </li>
+              <li class="section-btn" data-section="articles">
+                <a href="javascript:void(0)">News articles</a>
+              </li>
+            </ul>
+          </section>
+        </nav>
+        
+        <div id="global-container">
+            <div id="charts-container" >
+                <div id="radar-plot" class="screen active content-section">
+                    <div class="chart-header-row"></div>
+                    <div class="radar-plot axis-label"></div>
+                </div>
+            </div>
+            <div id="control-container" class="screen active">
+                <div id="time-slider-container">
+                    <div id="time-slider">
+                        <div class="slider-scale-container">
+                            <span class="slider-scale scale-1">2012</span>
+                            <span class="slider-scale scale-2">2013</span>
+                            <span class="slider-scale scale-3">2014</span>
+                            <span class="slider-scale scale-4">2015</span>
+                        </div>
+                        <div class="time-play-container">
+                            <button id="time-play-btn" class="square radius time-play-pause-btn" title="Auto-scroll through all years"><i class="fi-play"></i></button>
+                            <button id="time-pause-btn" class="square radius time-play-pause-btn"><i class="fi-pause"></i></button>
+                        </div>
+                        
+                        <div id="year-highlighter"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- <div id="charts-container">
+                <div id="crime" class="screen content-section bar-chart"></div>
+            </div> -->
+            <div id="charts-container">
+                <div id="home" class="screen content-section bar-chart"></div>
+            </div>
+            <!-- <div id="charts-container">
+                <div id="migration" class="screen content-section bar-chart"></div>
+            </div> -->
+            <div id="charts-container">
+                <div id="map" class="screen content-section"></div>
+            </div>
+            <div id="charts-container">
+                <div id="articles" class="screen content-section"></div>
+            </div>
+            
+        </div>
+        
+        <script data-main="scripts/app" src="scripts/require.js"></script>
+    </body>
+</html>
